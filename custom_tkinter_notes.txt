@@ -1,0 +1,75 @@
+GETTING STARTED WITH CUSTOM TKINTER
+
+STEP 1: IMPORT CUSTOM TKINTER
+SYNTAX: import customtkinter as ctk
+
+ROOT WINDOW
+root_window = ctk.CTk()
+root_window.title("title_here")
+root_window.geometry(widthXheight)
+
+RUNNING APP
+root_window.mainloop()
+
+CUSTOMIZING ROOT_WINDOW
+ctk.set_apearance_mode()
+ctk.set_ default_color_theme()
+
+CREATING BUTTONS
+button = ctk.CTkButton(master="root_window", options)
+button.place()
+
+INTERGRATING TKINTER WITHIN CUSTOM TKINTER
+
+SYNTAX: option = tkinter.value .... anchor = tkinter.CENTER
+
+USING FRAMES
+frame = ctk.CTkFrame(master, width, height, corner_radius, bg_color)
+
+button.place(relx=0-1, rely=0-1, anchor = tkinter.CENTER)
+
+CREATING TAB VIEW
+tab_view = ctk.CTkTabvew(master)
+tab_view.pack()
+
+tab_view.add("tab-1")
+tab_view.add("tab-2")
+tab_view.add("tab-3")
+tab_view.add("tab-4")
+
+tab_view.set("tab-1")... sets default tab
+
+tab_one_button ctk.CTkButton(tab_view.tab("tab-1"), text = "....")
+tab_one_butt0n.pack()
+
+tab_two_button ctk.CTkButton(tab_view.tab("tab-2"), text = "....")
+tab_two_button.pack()
+
+CREATING TEXTBOX OBJECTS
+text_box = ctk.CTkTextbox(master="")
+text_box.grid()
+
+CREATING SCROWBAR
+
+text_field = tkinter.Text(master="", highlightthickness=0)
+text_field.pack(row=0, column=0, sticly="nsew")
+
+scrollbar = ctk.CTkScrollbar(master="", command = where_to_be_placed.yview or .xview)
+scrollbar.geometry(row=0, column=1, sticky="ns")
+
+text_field.configure(yscrollcommand=scrollbar.set)
+
+CTK ENTRY PROPERTIES
+placeholder_text = ""
+
+CREATING COMBOBOXES
+combo_box = ctk.CTkComboBox(master="", values=["...", "...", "...", "...",])
+
+SWITH BOXES
+
+switch_var_1 = ctk.StringVar(value="on")
+switch_var_2 = ctk.StringVar(value="off")
+
+switch_one = ctk.CTkSwitch(master="", text="Switch Mode", command="", variable = switch_var_1, onvalue="on", offvalue="off")
+switch_one.pack()
+
